@@ -1,0 +1,8 @@
+{
+  "name": "school-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "dfb17b5c"
+}
