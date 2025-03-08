@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+
+import { OnboardingRoutingModule } from './onboarding-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-
-import { OnboardingPageRoutingModule } from './onboarding-routing.module';
-
-import { OnboardingPage } from './onboarding.page';
+import { OnboardingComponent } from './onboarding.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
+  declarations: [
+    OnboardingComponent,
+    LoginComponent
+  ],
   imports: [
     CommonModule,
-    FormsModule,
     IonicModule,
-    OnboardingPageRoutingModule
-  ],
-  declarations: [OnboardingPage]
+    OnboardingRoutingModule,
+    ReactiveFormsModule
+    
+  ]
 })
-export class OnboardingPageModule {}
+export class OnboardingModule { }

@@ -1,0 +1,44 @@
+// .form-control.icon-placeholder {
+//     background-image: url('https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/svg/person.svg');
+//     background-position: 10px center;
+//     background-repeat: no-repeat;
+//     background-size: 20px 20px;
+//   }
+//   .form-control::placeholder {
+//     font-style: italic;
+//     color: #aaa;
+//     padding-left: 25px; /* Adjust this value if needed */
+//   }
+//   .form-control.password-placeholder {
+//       background-image: url('https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/svg/lock-closed.svg');
+//       background-position: 10px center;
+//       background-repeat: no-repeat;
+//       background-size: 20px 20px;
+//     }
+
+//     .eye-icon {
+//       position: absolute;
+//       right: 10px;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       cursor: pointer;
+//     }
+//     .form-control {
+//         position: relative;
+//         padding-left: 40px; /* Space for the icon */
+//       }
+  
+//       .form-control::placeholder {
+//         font-style: italic;
+//         color: #aaa;
+//         padding-left: 35px; /* Adjust to make space for the icon */
+//       }  
+
+.username { 
+    position: relative;
+}
+
+.user-icon {
+    position: absolute;
+
+}
