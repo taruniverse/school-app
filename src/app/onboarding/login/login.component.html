@@ -3,7 +3,7 @@
 >
   <form [formGroup]="loginForm" (ngSubmit)="formSubmit()" class="w-100">
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Usrname</label>
+      <label for="username " class="form-label">Usrname</label>
       <span class="username">
         <input
           type="text"
@@ -15,7 +15,7 @@
       </span>
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <label for="password" class="form-label">Password</label>
       <input
         type="password"
         formControlName="password"
@@ -23,7 +23,6 @@
         placeholder="your password"
         id="password"
       />
-      
     </div>
     <button type="submit" class="btn btn-primary w-100">Sign In</button>
   </form>
