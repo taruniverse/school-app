@@ -1,19 +1,19 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { LoginFormComponent } from './onboarding/login-form/login-form.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  // },
   {
     path: 'onboarding',
-    loadChildren: () => import('./onboarding/onboarding.module').then( m => m.OnboardingPageModule)
+    loadChildren: () => import('./onboarding/onboarding.module').then(m => m.OnboardingModule)
   },
   {
-    path:'login',
-    component:LoginFormComponent
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'onboarding'
   }
 ];
 @NgModule({
