@@ -4,13 +4,39 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content [fullscreen]="true" class="bg-color position-relative main-container">
-  <ion-col class="h-100 w-100 container d-flex justify-content-center align-items-center flex-column position-relative">
-    <ion-row class="justify-content-center">
-      <h1 class="text-white">Appella</h1>
-    </ion-row>  
-    <ion-row class=" position-absolute bottom-0 mb-5 ">
-      <button class="btn btn-primary d-flex align-items-center" (click)="navigation()">Get Started <ion-icon name="arrow-forward-outline" class="ms-2"></ion-icon></button>
+<ion-content
+  [fullscreen]="true"
+  class="bg-color position-relative main-container"
+>
+  <div>
+    <img
+      src="../../assets/icon/rectangle_icon.svg"
+      class="rectangle_icon"
+      alt=""
+      srcset=""
+    />
+    <img
+      src="../../assets/icon/quater_cirle.svg"
+      class="quater_cirle"
+      alt=""
+      srcset=""
+    />
+  </div>
+  <ion-col
+    class="h-100 w-100 container d-flex justify-content-center align-items-center flex-column position-relative"
+  >
+    <ion-row class="justify-content-center flex-column align-items-center">
+      <ion-row><h1 class="text-white">AcademIQ</h1></ion-row>
+      <ion-row class="w-70 text-center subtitle mt-4"><p>Make the school app your personal assistant</p></ion-row>
+    </ion-row>
+    <ion-row class="position-absolute bottom-0 mb-5 w-50">
+      <a
+        [routerLink]="'/onboarding/login'"
+        class="btn btn-lg-primary d-flex align-items-center bg-white text-dark custom-btn"
+      >
+        Get Started
+        <ion-icon name="arrow-forward-outline" class="ms-2"></ion-icon>
+      </a>
     </ion-row>
   </ion-col>
 </ion-content>

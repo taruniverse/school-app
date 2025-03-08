@@ -13,7 +13,9 @@ export class LoginComponent  implements OnInit {
   loginForm!: FormGroup;
 
   constructor(private formService:FormService, public globalService:GlobalService) {
-    this.globalService.setLightStatusBar();
+    if (!(this.globalService.isPlatform('android') || this.globalService.isPlatform('ios'))) {
+      this.globalService.setDarkStatusBar();
+    }
   }
 
   ngOnInit() {

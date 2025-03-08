@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GlobalService } from '../services/global.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-onboarding',
@@ -9,14 +10,11 @@ import { GlobalService } from '../services/global.service';
   standalone: false,
 })
 export class OnboardingComponent implements OnInit {
-  constructor(private router: Router, private globalService:GlobalService) {
-    this.globalService.setDarkStatusBar()
+  constructor(private router: Router, private globalService:GlobalService, private navController: NavController,) {
+    if (!(this.globalService.isPlatform('android') || this.globalService.isPlatform('ios'))) {
+      this.globalService.setDarkStatusBar();
+    }
   }
 
   ngOnInit() {}
-
-  async navigation() {
-    console.log('tarun');
-    this.router.navigate(['/onboarding/login']);
-  }
 }

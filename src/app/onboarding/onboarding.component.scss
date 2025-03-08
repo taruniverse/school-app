@@ -1,14 +1,21 @@
-.bg-color{
-    // background-color: #0A0B2F;
-    --ion-background-color: #0A0B2F;
+.bg-color {
+  // background-color: #0A0B2F;
+  --ion-background-color: #0a0b2f;
 }
 
-// .main-container::before {
-//     content: '';
-//     position: absolute;
-//     background: url('/assets/icon/rectangle_icon.svg') no-repeat;
-//     bottom: 0%;
-//     top: 0;
-//     width: 100%;
-//     z-index: 99;
-// }
+.rectangle_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.quater_cirle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 10%;
+}
+
+.subtitle {
+  color: var(--subtitle-color) !important;
+}
