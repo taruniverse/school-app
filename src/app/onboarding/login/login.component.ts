@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./login.component.scss'],
   standalone: false,
 })
-export class LoginComponent implements OnInit, AfterViewChecked {
+export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   constructor(
     private formService: FormService,
@@ -21,18 +21,17 @@ export class LoginComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-    this.loginForm = this.formService.loginForm();
-  }
-
-  ngAfterViewChecked(): void {
     if (
+      (this.globalService.isPlatform('android') ||
+        this.globalService.isPlatform('ios')) &&
       !(
-        this.globalService.isPlatform('android') ||
-        this.globalService.isPlatform('ios')
+        this.globalService.isPlatform('android') &&
+        this.globalService.isPlatform('mobileweb')
       )
     ) {
       this.globalService.setLightStatusBar();
     }
+    this.loginForm = this.formService.loginForm();
   }
 
   async formSubmit() {

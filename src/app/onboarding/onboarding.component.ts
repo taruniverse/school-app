@@ -9,7 +9,7 @@ import { VibrateOptions } from '@capacitor/haptics';
   styleUrls: ['./onboarding.component.scss'],
   standalone: false,
 })
-export class OnboardingComponent implements OnInit, AfterViewChecked {
+export class OnboardingComponent implements OnInit {
   constructor(
     public globalService: GlobalService,
     private translate: TranslateService,
@@ -17,16 +17,17 @@ export class OnboardingComponent implements OnInit, AfterViewChecked {
     this.translate.setDefaultLang('en');
   }
 
-  ngOnInit(): void {}
-
-  ngAfterViewChecked(): void {
+  ngOnInit(): void {
     if (
+      (this.globalService.isPlatform('android') ||
+        this.globalService.isPlatform('ios')) &&
       !(
-        this.globalService.isPlatform('android') ||
-        this.globalService.isPlatform('ios')
+        this.globalService.isPlatform('android') &&
+        this.globalService.isPlatform('mobileweb')
       )
     ) {
       this.globalService.setDarkStatusBar();
     }
   }
+
 }
