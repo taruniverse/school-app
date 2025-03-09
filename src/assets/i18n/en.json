@@ -1,6 +1,14 @@
-{
+{   
+    "common": {
+        "savebtn":"Save",
+        "getStarted":"Get Started"
+    },
     "login": {
         "name":"Username",
         "password":"Password"
+    },
+    "onboarding":{
+        "title":"brainingcamp",
+        "subTitle":"Make the school app your personal assistant"
     }
 }

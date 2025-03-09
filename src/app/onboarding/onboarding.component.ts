@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { GlobalService } from '../services/global.service';
-import { NavController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { VibrateOptions } from '@capacitor/haptics';
 
 @Component({
   selector: 'app-onboarding',
@@ -9,12 +9,24 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./onboarding.component.scss'],
   standalone: false,
 })
-export class OnboardingComponent implements OnInit {
-  constructor(private router: Router, private globalService:GlobalService, private navController: NavController,) {
-    if (!(this.globalService.isPlatform('android') || this.globalService.isPlatform('ios'))) {
+export class OnboardingComponent implements OnInit, AfterViewChecked {
+  constructor(
+    public globalService: GlobalService,
+    private translate: TranslateService,
+  ) {
+    this.translate.setDefaultLang('en');
+  }
+
+  ngOnInit(): void {}
+
+  ngAfterViewChecked(): void {
+    if (
+      !(
+        this.globalService.isPlatform('android') ||
+        this.globalService.isPlatform('ios')
+      )
+    ) {
       this.globalService.setDarkStatusBar();
     }
   }
-
-  ngOnInit() {}
 }

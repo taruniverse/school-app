@@ -1,4 +1,4 @@
-<div
+<!-- <div
   class="container w-100 h-100 d-flex justify-content-center align-items-center"
 >
   <form [formGroup]="loginForm" (ngSubmit)="formSubmit()" class="w-100">
@@ -30,4 +30,31 @@
     </div>
     <button type="submit" class="btn btn-primary w-100">Sign In</button>
   </form>
-</div>
+</div> -->
+
+<ion-content
+  [fullscreen]="true"
+  class="bg-color-white position-relative main-container"
+>
+  <ion-col
+    class="h-100 w-100 container d-flex justify-content-center align-items-center flex-column position-relative loginPage"
+  >
+    <ion-row class="justify-content-center">
+      <img src="/assets/full_logo.png" alt="" class="w-70" />
+    </ion-row>
+    <ion-row class="justify-content-center mt-4">
+      <h1 class="text-color-started montserrat-700 getStarted">
+        Let's get started. {{this.globalService.isPlatform('android')}}
+      </h1>
+    </ion-row>
+    <ion-row class="w-60 text-center mt-2">
+      <p class="subtitle roboto-SemiBold-600">
+        {{ "onboarding.subTitle" | translate }}
+      </p>
+    </ion-row>
+
+    <form [formGroup]="loginForm" (ngSubmit)="formSubmit()" class="w-100">
+      <ion-row> </ion-row>
+    </form>
+  </ion-col>
+</ion-content>

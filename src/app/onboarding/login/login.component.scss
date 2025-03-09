@@ -42,3 +42,12 @@
     position: absolute;
 
 }
+
+.bg-color-white {
+    --ion-background-color: #fff;
+    color: black;
+}
+
+.text-color-started {
+    color: var(--secondary-color);
+}
