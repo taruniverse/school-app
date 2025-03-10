@@ -40,21 +40,65 @@
     class="h-100 w-100 container d-flex justify-content-center align-items-center flex-column position-relative loginPage"
   >
     <ion-row class="justify-content-center">
-      <img src="/assets/full_logo.png" alt="" class="w-70" />
+      <img src="/assets/full_logo.png" alt="" class="w-60" />
     </ion-row>
-    <ion-row class="justify-content-center mt-4">
-      <h1 class="text-color-started montserrat-700 getStarted">
-        Let's get started. {{this.globalService.isPlatform('android')}}
-      </h1>
+    <ion-row class="justify-content-center mt-3">
+      <h3 class="text-color-started montserrat-700 getStarted">
+        Let's get started.
+      </h3>
     </ion-row>
-    <ion-row class="w-60 text-center mt-2">
+    <ion-row class="w-60 text-center mt-2 justify-content-center">
       <p class="subtitle roboto-SemiBold-600">
         {{ "onboarding.subTitle" | translate }}
       </p>
     </ion-row>
 
-    <form [formGroup]="loginForm" (ngSubmit)="formSubmit()" class="w-100">
-      <ion-row> </ion-row>
+    <form [formGroup]="loginForm" (ngSubmit)="formSubmit()" class="w-100 mt-4">
+      <div class="p-2">
+        <ion-row class="position-relative">
+          <label
+            for="username"
+            class="form-label text-color-started roboto-fullBold-800"
+          >
+            {{ "login.name" | translate | uppercase }}
+          </label>
+          <ion-icon name="person" class="input-login-icon"></ion-icon>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            formControlName="username"
+            placeholder="your username"
+          />
+        </ion-row>
+        <ion-row class="position-relative mt-5">
+          <label
+            for="username"
+            class="form-label text-color-started roboto-fullBold-800"
+          >
+            {{ "login.password" | translate | uppercase }}
+          </label>
+          <ion-icon name="lock-closed" class="input-login-icon"></ion-icon>
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control"
+            placeholder="your password"
+            id="password"
+          />
+        </ion-row>
+        <ion-row class="mt-3 justify-content-end">
+          <a routerLink="" class="forgetPass roboto-Bold-700">Forget your password?</a>
+        </ion-row>
+        <ion-row class="position-relative mt-5">
+          <button
+            type="button"
+            class="btn btn-lg-primary d-flex align-items-center text-white custom-btn signin-btn"
+          >
+            <p class="m-0 roboto-Bold-700">{{ "login.signin" | translate }}</p>
+          </button>
+        </ion-row>
+      </div>
     </form>
   </ion-col>
 </ion-content>

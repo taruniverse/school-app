@@ -48,6 +48,17 @@
     color: black;
 }
 
-.text-color-started {
+.text-color-started, .forgetPass {
     color: var(--secondary-color);
+}
+
+.input-login-icon {
+    position: absolute;
+    top: 46%;
+    font-size: 24px;
+    padding-left: .4rem;
+}
+
+.signin-btn {
+    background: var(--secondary-color);
 }

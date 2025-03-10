@@ -5,7 +5,8 @@
     },
     "login": {
         "name":"Username",
-        "password":"Password"
+        "password":"Password",
+        "signin":"Sign in"
     },
     "onboarding":{
         "title":"brainingcamp",

@@ -140,12 +140,37 @@
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .custom-btn {
   width: 100% !important;
   justify-content: center !important;
-  padding: 12px 32px !important;
+  padding: 16px 32px !important;
+  border-radius: 1rem !important;
 }
 
 .subtitle {
   color: var(--subtitle-color) !important;
+}
+
+input {
+  border: none !important;
+  border-bottom: 1px solid darkblue !important;
+  border-radius: 0 !important;
+  padding-bottom: .8rem !important;
+}
+
+input::placeholder {
+  color: var(--placeholder-color) !important;
+  padding-left: 30px !important;
+}
+
+label {
+  font-size: 14px;
+}
+
+ion-icon {
+ color: var(--secondary-color); 
 }
